@@ -7,17 +7,17 @@ let leadEl = document.querySelector(".lead");
 let timerId = "";
 
 // // Timer for the Quiz
-// startQuiz.addEventListener("click", function () {
-//         var timerInterval = setInterval(function() {
-//           secondsLeft--;
-//           timerEl.textContent = "Time Remaining: " + secondsLeft;
+startQuiz.addEventListener("click", function () {
+        var timerInterval = setInterval(function() {
+          secondsLeft--;
+          timerEl.textContent = "Time Remaining: " + secondsLeft;
 
-//           if(secondsLeft === 0) {
-//             clearInterval(timerInterval);
-//             sendMessage();
-//           }
-//         }, 1000);
-//     });
+          if(secondsLeft === 0) {
+            clearInterval(timerInterval);
+            sendMessage();
+          }
+        }, 1000);
+    });
 
 // Questions & Answers
 let questions = [
@@ -58,7 +58,7 @@ let questionsIndex = 0;
 let score = 0;
 
 // Timer is 15 seconds for each question
-let secondsLeft = questions.length * 1;
+let secondsLeft = questions.length * 15;
 
 // Game Functions
 function startGame() {
