@@ -24,23 +24,23 @@ let questions = [
   {
     q: "What is an example of a variable in Javascript?",
     choices: ["var", "const", "let", "all of the above"],
-    answer: 3,
+    answer: "all of the above",
   },
   {
     q: "What symbols would you use to create an array?",
     choices: ["{ }", "` `", "[ ]", "( )"],
-    answer: 2,
+    answer: "[ ]",
   },
   {
     q:
       "The ________ method displays an box with a specified message and an OK button.",
     choices: ["prompt", "alert", "Console Log", "Warning"],
-    answer: 1,
+    answer: "alert",
   },
   {
     q: "What symbols would you use to create an object?",
     choices: ["{ }", "` `", "[ ]", "( )"],
-    answer: 0,
+    answer: "{ }",
   },
   {
     q: "What does DOM stand for?",
@@ -50,7 +50,7 @@ let questions = [
       "Dominant Object Matrix",
       "Document Object Method",
     ],
-    answer: 1,
+    answer: "Document Object Model",
   },
 ];
 
