@@ -4,8 +4,8 @@ let nextQuestionEl = document.querySelector("#nextQuestion");
 let timerEl = document.querySelector("#timer");
 let questionsEl = document.querySelector("#questions");
 let leadEl = document.querySelector(".lead");
-// let inputEl = document.querySelector("#inputdiv")
 let highScoreEl = document.querySelector("#highscores")
+let quizRulesEl = document.querySelector("#quizRules")
 let timerId = "";
 
 // Timer for the Quiz
@@ -47,7 +47,7 @@ let questions = [
 ];
 
 let questionsIndex = 0;
-// let score = 0;
+
 
 // Timer is 15 seconds for each question
 let secondsLeft = questions.length * 15;
@@ -58,6 +58,7 @@ function startGame() {
   startQuiz.classList.add("hide");
   leadEl.classList.add("hide");
   timerEl.classList.remove("hide");
+  quizRulesEl.classList.add("hide");
   setTimer();
 }
 
@@ -78,7 +79,6 @@ function countDown() {
   if (secondsLeft === 0 || questionsIndex >= questions.length) {
     questionsEl.classList.add("hide");
     timerEl.classList.add("hide");
-    // inputEl.classList.remove("hide");
     highScoreEl.classList.remove("hide");
     clearInterval(timerId);
     endGame();
@@ -90,12 +90,12 @@ function countDown() {
 
 function nextQuestion() {
   questionsEl.innerHTML = `
-  <h4 id="question">${questions[questionsIndex].q}</h4>
+  <h4 class="display-6"id="question">${questions[questionsIndex].q}</h4>
   <div class="d-grid gap-2 col-6 mx-auto">
-      <button type="button" class = "btn btn-primary answers" id="a1">${questions[questionsIndex].choices[0]}</button>
-      <button type="button" class = "btn btn-primary answers" id="a2">${questions[questionsIndex].choices[1]}</button>
-      <button type="button" class = "btn btn-primary answers" id="a3">${questions[questionsIndex].choices[2]}</button>
-      <button type="button" class = "btn btn-primary answers" id="a4">${questions[questionsIndex].choices[3]}</button>
+      <button type="button" class = "btn btn-info answers" id="a1">${questions[questionsIndex].choices[0]}</button>
+      <button type="button" class = "btn btn-info answers" id="a2">${questions[questionsIndex].choices[1]}</button>
+      <button type="button" class = "btn btn-info answers" id="a3">${questions[questionsIndex].choices[2]}</button>
+      <button type="button" class = "btn btn-info answers" id="a4">${questions[questionsIndex].choices[3]}</button>
   </div>`;
 
   let answersEl = document.querySelectorAll(".answers");
@@ -113,7 +113,6 @@ function nextQuestion() {
       } else {
         questionsEl.classList.add("hide");
         timerEl.classList.add("hide");
-        // inputEl.classList.remove("hide");
         highScoreEl.classList.remove("hide");
         endGame();
         clearInterval(timerId);
@@ -141,12 +140,8 @@ function setScore() {
 function getScore() {
   let quizContent = `
   <h2>` + localStorage.getItem("highscoreName") + `'s highscore is:</h2>
-  <h1>` + localStorage.getItem("highscore") + `</h1><br>  
+  <h2>` + localStorage.getItem("highscore") + `</h2><br>  
   `;
 
   highScoreEl.innerHTML = quizContent;
 }
-
-
-
-// startQuiz.addEventListener("click", startGame);
