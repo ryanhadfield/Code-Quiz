@@ -4,6 +4,8 @@
 
 #startButton {
   font-family: "Akaya Kanadaka", cursive;
+  font-size: x-large;
+  color:rgb(44, 40, 40);
 }
 
 #saveBtn {
@@ -31,3 +33,35 @@ body, html {
   background-size: cover;
 }
 
+
+#jslogo {
+  height: 175px;
+  width: 175px;
+}
+
+h1 {
+  color: #F00048;
+  font-size: xxx-large;
+}
+
+ol {
+  font-weight: 400;
+  font-size: large;
+}
+
+#quizRules {
+  opacity: .9;
+}
+
+#timer {
+  font-size: xx-large;
+}
+
+#a1,#a2,#a3,#a4 {
+  font-size: x-large;
+  color:rgb(44, 40, 40);
+}
+
+h2{
+  color:#F7E019;
+}
