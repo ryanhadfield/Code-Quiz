@@ -1,9 +1,33 @@
 #codeQuiz {
   font-family: "Akaya Kanadaka", cursive;
-  font-size: 65px;
+}
+
+#startButton {
+  font-family: "Akaya Kanadaka", cursive;
+}
+
+#saveBtn {
+  font-family: "Akaya Kanadaka", cursive;
 }
 
 .hide {
   display: none;
+}
+
+body, html {
+  height: 100%;
+}
+
+#bg {
+  /* The image used */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url("javascript-background.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
