@@ -25,7 +25,7 @@ Use this basic code quiz to test your Javascript knowledge.
 - The game is over when you have run out of time or finished all the questions
 
 
-![Code Quiz](./codequiz-screengrab.png)
+![Code Quiz](./codequiz-screengrab.PNG)
 
 ---
 ## Links
