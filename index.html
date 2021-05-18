@@ -23,19 +23,22 @@
 
 <!-- Code Quiz Body -->
 
-<body style="background-color: cadetblue">
-  <div class="container text-center">
-    <main class="container bg-white my-4 p-4">
+<body id="bg">
+  <div class="container text-center text-light .bg-danger.bg-gradient my-5 main">
+    <main class="container">
+
       <header>
-        <!-- High Scores Link -->
-        <div class="text-left">
-          <a href="./highscores.html">High Scores</a>
+        <!-- Timer -->
+        <div class="row">
+          <div id="timer" class="col text-right"></div>
         </div>
 
         <!-- Header and Img -->
         <img src="JSlogo.png" width="100" height="100" class="rounded p-1 mx-auto d-block" alt="Javascript_Logo" />
         <h1 id="codeQuiz">Code Quiz</h1>
       </header>
+
+
       <div class="">
         <h3 class="lead display-6">
           Use this basic code quiz to test your Javascript knowledge <br />
@@ -47,31 +50,25 @@
 
         <!-- Start Button -->
         <div class="d-grid gap-2 col-6 mx-auto">
-          <button class="btn btn-primary display-6" type="button" id="startButton">
+          <button class="btn btn-info display-6" type="button" id="startButton">
             Start Quiz
           </button>
         </div>
         <br />
 
-        <div class="d-grid gap-2 col-6 mx-auto">
-          <button class="btn btn-primary hide" type="button" id="nextQuestion">
-            Next Question
-          </button>
-        </div>
-        <br />
-   
-          <!-- <p>Quiz Rules</p>
+        <!-- <p>Quiz Rules</p>
           <ol class="text-left">
             <li>You will 75 seconds to complete this Javascript Quiz</li>
             <li>You will select your answer by clicking on the button with the correct answer</li>
             <li>Each time you select a wrong answer 15 seconds is deducted from your time.</li>
             <li>The game is over when you have run out of time or finished all the questions</li>
           </ol> -->
-        
 
-        <!-- Timer -->
-        <div class="timer"></div>
       </div>
+
+      <!-- Game Score -->
+      <div class="row hide" id="highscores"></div>
+
     </main>
   </div>
 
